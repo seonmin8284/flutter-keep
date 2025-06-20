@@ -50,7 +50,6 @@ class _HomeScreenState extends State<HomeScreen> with CommandHandler {
   }
 
   void _initializeSharing() {
-    // Listen to shared media files
     _mediaSubscription = SharingService.mediaStream?.listen((files) {
       if (files.isNotEmpty) {
         _handleSharedFiles(files);
